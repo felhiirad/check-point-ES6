@@ -7,12 +7,21 @@ const pets = [
   //2
  const  getAge = pet =>new Date().getFullYear() - pet.bornOn;
 
-//3
-pets.forEach(pet=>{ 
+//3.1
+/*pets.forEach(pet=>{ 
 pet.age=getAge(pet)
 
 })
-console.log(pets);
+console.log(pets);*/
+
+//3.2 autre methode 
+let petsWithAge = [];
+pets.map(elm=>elm.age=getAge(elm))
+pets.map(elm => petsWithAge.push(elm))
+
+console.log(petsWithAge);
+
+
 //4
 let dogs = [];
 dogs=pets.filter(pet => pet.type === 'dog');
