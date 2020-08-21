@@ -7,14 +7,14 @@ const pets = [
   //2
  const  getAge = pet =>new Date().getFullYear() - pet.bornOn;
 
-//3.1
+//3.1 1ere methode pour ajouter le cham du age
 /*pets.forEach(pet=>{ 
 pet.age=getAge(pet)
 
 })
 console.log(pets);*/
 
-//3.2 autre methode 
+//3.2 2eme methode 
 let petsWithAge = [];
 pets.map(elm=>elm.age=getAge(elm))
 pets.map(elm => petsWithAge.push(elm))
